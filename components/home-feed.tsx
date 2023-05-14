@@ -12,8 +12,8 @@ export const Homefeed = ({ rss }: HomefeedProps) => {
   const rightRss = rss.slice(7)
 
   return (
-    <div className="my-4 sm:grid grid-cols-7 gap-4">
-      <section className="col-span-5 sm:border-r-2 sm:pr-4">
+    <div className="my-4 lg:grid grid-cols-7 gap-4">
+      <section className="col-span-5 lg:border-r-2 lg:pr-4">
         <Leftfeed rss={leftRss} />
       </section>
       <section className="col-span-2">

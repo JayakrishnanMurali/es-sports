@@ -24,19 +24,19 @@ export const Feedcard = ({
     <div
       className={cn(
         "flex gap-4 items-center flex-col sm:flex-row ",
-        imgTop && "flex-col "
+        imgTop && "flex-col md:flex-row lg:flex-col"
       )}
     >
-      <div className={cn("order-1", (imgLeft || imgTop) && "sm:order-2")}>
+      <div className={cn("order-1", (imgLeft || imgTop) && "lg:order-2")}>
         <Link href={news.link ?? "/"}>
-          <h2 className={cn("line-clamp-3", smallText && "text-xl")}>
+          <h2 className={cn("line-clamp-3", smallText && "lg:text-xl")}>
             {news.title}
           </h2>
         </Link>
         <p
           className={cn(
             "my-2 line-clamp-4",
-            smallText && "text-sm line-clamp-3"
+            smallText && "lg:text-sm lg:line-clamp-3"
           )}
         >
           {news.description}
@@ -55,7 +55,7 @@ export const Feedcard = ({
         <Image
           className={cn(
             "object-cover min-w-[300px] min-h-[300px]",
-            smallText && " min-w-[200px] max-h-[200px]"
+            smallText && " lg:min-w-[200px] lg:max-h-[200px]"
           )}
           src={news.image ?? ""}
           alt={news.title ?? "Unknown"}
