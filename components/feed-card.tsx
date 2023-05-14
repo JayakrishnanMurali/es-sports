@@ -21,12 +21,24 @@ export const Feedcard = ({
   smallText = false,
 }: FeedcardProps) => {
   return (
-    <div className={cn("flex  gap-4 items-center", imgTop && "flex-col ")}>
-      <div className={cn("order-1", (imgLeft || imgTop) && "order-2")}>
+    <div
+      className={cn(
+        "flex gap-4 items-center flex-col sm:flex-row ",
+        imgTop && "flex-col "
+      )}
+    >
+      <div className={cn("order-1", (imgLeft || imgTop) && "sm:order-2")}>
         <Link href={news.link ?? "/"}>
-          <h2 className={cn(smallText && "text-xl")}>{news.title}</h2>
+          <h2 className={cn("line-clamp-3", smallText && "text-xl")}>
+            {news.title}
+          </h2>
         </Link>
-        <p className={cn("my-2", smallText && "text-sm line-clamp-3")}>
+        <p
+          className={cn(
+            "my-2 line-clamp-4",
+            smallText && "text-sm line-clamp-3"
+          )}
+        >
           {news.description}
         </p>
 
@@ -43,7 +55,7 @@ export const Feedcard = ({
         <Image
           className={cn(
             "object-cover min-w-[300px] min-h-[300px]",
-            smallText && " min-w-[200px] max-h-[50px]"
+            smallText && " min-w-[200px] max-h-[200px]"
           )}
           src={news.image ?? ""}
           alt={news.title ?? "Unknown"}
