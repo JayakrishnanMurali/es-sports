@@ -1,9 +1,9 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Essentially Sports",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "A mobile website that delivers stories everyday about America’s favorite sports celebrities with ‘The Fan’s Perspective’",
   mainNav: [
     {
       title: "Home",
@@ -11,8 +11,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    twitter: "https://twitter.com/es_sportsnews/",
+    youtube: "https://www.youtube.com/channel/UCEj2bvKodN2-rM1nB64OBeA",
   },
 }

@@ -3,12 +3,14 @@ import {
   Moon,
   SunMedium,
   Twitter,
+  Youtube,
   type Icon as LucideIcon,
 } from "lucide-react"
 
 export type Icon = LucideIcon
 
 export const Icons = {
+  youtube: Youtube,
   sun: SunMedium,
   moon: Moon,
   twitter: Twitter,
