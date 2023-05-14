@@ -1,6 +1,7 @@
 import {
   LucideProps,
   Moon,
+  Search,
   SunMedium,
   Twitter,
   Youtube,
@@ -10,6 +11,7 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
+  search: Search,
   youtube: Youtube,
   sun: SunMedium,
   moon: Moon,
