@@ -23,12 +23,12 @@ export const Feedcard = ({
   return (
     <div
       className={cn(
-        "flex gap-4 items-center flex-col sm:flex-row ",
+        "flex gap-4 items-center p-2 transition-all duration-300 ease-in-out rounded-md hover:shadow-md flex-col sm:flex-row ",
         imgTop && "flex-col md:flex-row lg:flex-col"
       )}
     >
       <div className={cn("order-1", (imgLeft || imgTop) && "lg:order-2")}>
-        <Link href={news.link ?? "/"}>
+        <Link href={news.link ?? "/"} target="_blank">
           <h2 className={cn("line-clamp-3", smallText && "lg:text-xl")}>
             {news.title}
           </h2>
@@ -51,18 +51,25 @@ export const Feedcard = ({
           )}
         </div>
       </div>
-      <div className={cn("order-2", (imgLeft || imgTop) && "order-1")}>
-        <Image
+      <Link href={news.link ?? "/"} target="_blank">
+        <div
           className={cn(
-            "object-cover min-w-[300px] min-h-[300px]",
-            smallText && " lg:min-w-[200px] lg:max-h-[200px]"
+            "order-2 overflow-hidden rounded-md ",
+            (imgLeft || imgTop) && "order-1"
           )}
-          src={news.image ?? ""}
-          alt={news.title ?? "Unknown"}
-          width={smallText ? 600 : 400}
-          height={smallText ? 50 : 400}
-        />
-      </div>
+        >
+          <Image
+            className={cn(
+              "object-cover hover:scale-125 transition-all duration-500 min-w-[300px] min-h-[300px]",
+              smallText && " lg:min-w-[200px] lg:max-h-[200px]"
+            )}
+            src={news.image ?? ""}
+            alt={news.title ?? "Unknown"}
+            width={smallText ? 600 : 400}
+            height={smallText ? 50 : 400}
+          />
+        </div>
+      </Link>
     </div>
   )
 }
