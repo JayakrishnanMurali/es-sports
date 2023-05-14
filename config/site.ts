@@ -14,6 +14,7 @@ export const siteConfig = {
     twitter: "https://twitter.com/es_sportsnews/",
     youtube: "https://www.youtube.com/channel/UCEj2bvKodN2-rM1nB64OBeA",
   },
+  rssLink: "https://www.essentiallysports.com/feed/",
 
   bannerNav: [
     {

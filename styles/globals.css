@@ -78,4 +78,24 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight transition-colors    lg:text-5xl;
+  }
+
+  h2 {
+    @apply scroll-m-20 text-3xl font-semibold tracking-tight transition-colors;
+  }
+
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight transition-colors;
+  }
+
+  h4 {
+    @apply scroll-m-20 text-xl font-medium tracking-tight  transition-colors;
+  }
+
+  p {
+    @apply scroll-m-20 text-base font-normal tracking-tight   transition-colors;
+  }
 }
